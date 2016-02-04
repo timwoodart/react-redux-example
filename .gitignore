@@ -1,7 +1,8 @@
 /node_modules
 /.*
 !.gitignore
-!.npmignore
+!.
+!.babelrc
 .DS_STORE
 dist
 npm-debug.log

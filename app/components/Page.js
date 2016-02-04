@@ -1,7 +1,6 @@
 import React from 'react';
 import {Grid, Row, Column} from 'react-cellblock';
 import marked from 'marked';
-import {ComponentA} from 'moduleA';
 import styles from './page.scss';
 
 export default React.createClass({
@@ -27,7 +26,6 @@ export default React.createClass({
                 </header>
               </Column>
               <Column width="1/2">
-                <ComponentA />
               </Column>
               <Column width="1/2">
                 <div>
