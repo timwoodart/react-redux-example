@@ -1,0 +1,8 @@
+// import bourbon
+@import 'bourbon';
+
+// SASS Variables
+@import './vars.scss';
+
+// Import component styles
+@import '../components/Page.scss'

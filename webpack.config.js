@@ -2,6 +2,8 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const bourbon = require('bourbon').includePaths;
+
 const ENV = process.env.NODE_ENV || 'development';
 
 // Prod and Dev webpack configs
@@ -28,7 +30,7 @@ const config = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass')
+        loader: ExtractTextPlugin.extract('style', 'css!sass?includePaths[]=' + bourbon)
       },
       {
         test: /\.json$/,
@@ -36,7 +38,11 @@ const config = {
       },
       {
         test: /\.(png|jpg|jpeg|svg|woff)?$/,
-        loader: 'url?limit=10000'
+        loader: 'url',
+        query: {
+          limit: 10000,
+          name: './public/images/[name]-[hash].[ext]'
+        }
       },
       {
         test: /\.(woff2|eot|ttf|gif)?$/,
@@ -45,7 +51,7 @@ const config = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin('app.css')
+    new ExtractTextPlugin('[name].css')
   ],
   resolve: {
     modulesDirectories: ['node_modules', './src/components']

@@ -1,6 +1,41 @@
-.main-page-component,
-.componentA
- {
-  border: 1px solid #D4D4D4;
+// Fonts
+@include font-face("ChunkFive", "#{$fonts-folder}/ChunkFive/Chunkfive", $file-formats: svg ttf otf);
+
+// 100% Image
+html {
+  @include background-image(url("#{$image-folder}/standard-issue-hero.jpg"));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
+// Hero Content
+.hero-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.hero-container:before {
+  content: '';
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.hero {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+// TODO move to a font typography palette
+.hero h1 {
+  font-family: "ChunkFive";
+  font-size: 80px;
+  color: #eaeaea;
+}
