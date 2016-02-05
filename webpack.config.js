@@ -51,7 +51,7 @@ const config = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name]-[hash].css')
   ],
   resolve: {
     modulesDirectories: ['node_modules', './src/components']

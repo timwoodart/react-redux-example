@@ -1,13 +1,14 @@
-require('./sass/app.scss');
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { Provider } from 'react-redux';
+
+import Routes from './routes';
+import store from './store';
+
 ReactDOM.render(
-  <div className="hero-container">
-    <div className="hero">
-      <h1>Lets get started on your new profile</h1>
-    </div>
-  </div>,
+  <Provider store={store}>
+    <Routes />
+  </Provider>,
   document.getElementById('app')
 );
