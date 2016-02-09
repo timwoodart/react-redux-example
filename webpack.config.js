@@ -11,7 +11,7 @@ const webpackDev = require('./webpack.config.dev');
 const webpackProd = require('./webpack.config.prod');
 
 const config = {
-  // context: path.join(__dirname),
+  context: path.join(__dirname),
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
@@ -30,7 +30,7 @@ const config = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass?includePaths[]=' + bourbon)
+        loader: ExtractTextPlugin.extract('style', 'css!sass?includePaths[]=' + bourbon + ',' + (path.resolve(__dirname, "./node_modules")))
       },
       {
         test: /\.json$/,

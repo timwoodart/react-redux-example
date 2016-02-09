@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/timwoodart/react-flux-example#readme",
   "dependencies": {
+    "bootstrap-sass": "^3.3.6",
     "bourbon": "^4.2.6",
     "express": "^4.13.4",
     "history": "^1.17.0",
