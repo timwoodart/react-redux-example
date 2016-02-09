@@ -54,7 +54,10 @@ const config = {
     new ExtractTextPlugin('[name]-[hash].css')
   ],
   resolve: {
-    modulesDirectories: ['node_modules', './src/components']
+    modulesDirectories: ['node_modules', './src/components'],
+    alias: {
+      'react': path.resolve('./node_modules/react')
+    }
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),

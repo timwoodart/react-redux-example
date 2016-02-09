@@ -2,8 +2,8 @@
 // runtime transpilation for ES6/7
 const fs = require('fs');
 
-const babelrc = fs.readFileSync('./.babelrc'),
-    babelConfig;
+const babelrc = fs.readFileSync('./.babelrc');
+var babelConfig;
 
 try {
   babelConfig = JSON.parse(babelrc);
@@ -11,7 +11,6 @@ try {
   console.error('ERROR: Error parsing .babelrc.');
   console.error(err);
 }
-
 require('babel-core/register')(babelConfig);
 
 // Setup webpack and express
