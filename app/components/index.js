@@ -1,6 +1,4 @@
-export default {
-  App: require('./Pages/App/App'),
-  Home: require('./Pages/Home/Home'),
-  Dashboard: require('./Pages/Dashboard/Dashboard'),
-  Hero: require('./Hero/Hero')
-}
+export App from './Pages/App/App';
+export Home from './Pages/Home/Home';
+export Dashboard from './Pages/Dashboard/Dashboard';
+export Hero from './Hero/Hero';

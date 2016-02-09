@@ -1,9 +1,9 @@
-import { applyMiddleware, compose, createStore } from 'redux';
-import history from '../utils/history';
+import { applyMiddleware, createStore } from 'redux';
+import { createHistory } from 'history';
 import { syncHistory } from 'react-router-redux';
 import reducer from '../reducers';
 
-const middleware = syncHistory(history);
+const middleware = syncHistory(createHistory());
 const initialState = {};
 
 let store = createStore(

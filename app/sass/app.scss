@@ -1,8 +1,15 @@
 // import bourbon
 @import 'bourbon';
 
+// Bootstrap
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+
 // SASS Variables
 @import './vars.scss';
 
+// Global
+@import './global.scss'
+
 // Import component styles
-@import '../components/Page/Page.scss'
