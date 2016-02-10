@@ -10,6 +10,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import './vars.scss';
 
 // Global
-@import './global.scss'
+@import './global.scss';
 
 // Import component styles
+@import '../components/Profile/profileForm.scss';
