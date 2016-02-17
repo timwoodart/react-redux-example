@@ -1,9 +1,10 @@
 # React/Redux Example
-Redux / React Example to display the application architecture whereby the User Action of entering in there profile details will update the State tree and ultimately, the View.
+Redux / React Example to display the application architecture whereby the User Action of entering in there profile details will update the State tree and ultimately, other components in the View.
 
 ## Installation and Startup
 `npm install`<br>
-`npm start`
+`npm start`<br>
+Go to http://localhost:3000/ in your browser
 
 To run locally with webpack hot reloading (Development Mode)
 `npm run dev`
@@ -15,15 +16,17 @@ To run locally with webpack hot reloading (Development Mode)
 (x) Create Profile Tab in Header Bar
 
 ## What is used
-[React](facebook.github.io/react/)
-[Redux](http://redux.js.org/)
-### React:
-[React Bootstrap Components](https://react-bootstrap.github.io/components)
-[React Cellblock](https://github.com/dowjones/react-cellblock)
-[React Router](https://github.com/reactjs/react-router)
-### SASS:
-[Bourbon](http://bourbon.io/)
-[Bootstrap CSS](http://bourbon.io/)
+[React](facebook.github.io/react/)<br>
+[Redux](http://redux.js.org/)<br>
+[Webpack](webpack.github.io)<br>
+### React Extras:
+[React Bootstrap Components](https://react-bootstrap.github.io/components)<br>
+[React Cellblock](https://github.com/dowjones/react-cellblock)<br>
+[React Router](https://github.com/reactjs/react-router)<br>
+### SASS Goodies:
+[Bourbon](http://bourbon.io/)<br>
+[Bootstrap CSS](http://bourbon.io/)<br>
+
 
 ## Happy coding!
 Enjoy! Hope it helps get your project off the ground!
