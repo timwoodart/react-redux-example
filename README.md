@@ -1,8 +1,29 @@
-#react-flux-example
-Example repo and boilerplate for React using Flux Architecture.
+# React/Redux Example
+Redux / React Example to display the application architecture whereby the User Action of entering in there profile details will update the State tree and ultimately, the View.
 
-TODO:
-Set up intake form
-Set application state
-output user details
+## Installation and Startup
+`npm install`<br>
+`npm start`
 
+To run locally with webpack hot reloading (Development Mode)
+`npm run dev`
+
+## TODOS:
+(x) Set up intake form<br>
+(x) Set application state<br>
+(x) output user details<br>
+(x) Create Profile Tab in Header Bar
+
+## What is used
+[React](facebook.github.io/react/)
+[Redux](http://redux.js.org/)
+### React:
+[React Bootstrap Components](https://react-bootstrap.github.io/components)
+[React Cellblock](https://github.com/dowjones/react-cellblock)
+[React Router](https://github.com/reactjs/react-router)
+### SASS:
+[Bourbon](http://bourbon.io/)
+[Bootstrap CSS](http://bourbon.io/)
+
+## Happy coding!
+Enjoy! Hope it helps get your project off the ground!
