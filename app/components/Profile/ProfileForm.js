@@ -88,7 +88,7 @@ export default class ProfileForm extends React.Component {
 }
 
 ProfileForm.propTypes = {
-  formHeading: PropTypes.String
+  formHeading: PropTypes.string
 }
 
 ProfileForm.defaultProps = {

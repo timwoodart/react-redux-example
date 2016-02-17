@@ -5,7 +5,9 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <ProfileForm />
+        <ProfileForm
+          formHeading="Let's start off by adding a little about yourself"
+        />
       </div>
     );
   }
