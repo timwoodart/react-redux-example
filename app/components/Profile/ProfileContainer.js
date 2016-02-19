@@ -5,40 +5,18 @@ import { Grid, Row, Column } from 'react-cellblock';
 import { ProfileForm, ProfileDisplay } from '../../components';
 import { updateProfile } from '../../actions/ProfileActions';
 
-// console.log(ProfileActions)
-
 class ProfileContainer extends Component {
-
   constructor(props) {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  // componentDidMount() {
-  //   //get store details
-  //   const {store} = this.context;
-  //   this.unsubscribe = store.subscribe(() => 
-  //     this.forceUpdate()
-  //   );
-  // }
-
-  // componentWillUnmount() {
-  //   this.unsubscribe();
-  // }
 
   handleSubmit(userObj) {
     this.props.updateProfile(userObj);
   }
 
   render() {
-
-    console.log('render in Container')
-    // const {store} = this.context;
-    // const state = store.getState();
-    // console.log(state);
-
     let { profile } = this.props;
-
-    console.log(profile);
 
     return (
       <Grid>

@@ -8,17 +8,22 @@ export default class ProfileForm extends React.Component {
     super(props);
     // local binding
     this._submitProfile = this._submitProfile.bind(this);
+    this._getFormRefs = this._getFormRefs.bind(this);
   }
-  
-  _submitProfile(e) {
-    e.preventDefault();
-    // get refs
-    var userProfile = {
+
+  _getFormRefs() {
+    return {
       userFirstName: findDOMNode(this.refs.userFirstName.getInputDOMNode()).value,
       userLastName: findDOMNode(this.refs.userLastName.getInputDOMNode()).value,  
       userTitle: findDOMNode(this.refs.userTitle.getInputDOMNode()).value,
       userCity: findDOMNode(this.refs.userCity.getInputDOMNode()).value
     }
+  }
+  
+  _submitProfile(e) {
+    e.preventDefault();
+    // get refs
+    var userProfile = this._getFormRefs();
 
     // dispatch update
     this.props.handleSubmit(userProfile);
