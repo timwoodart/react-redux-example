@@ -10,9 +10,9 @@ To run locally with webpack hot reloading (Development Mode)
 `npm run dev`
 
 ## TODOS:
-(x) Set up intake form<br>
-(x) Set application state<br>
-(x) output user details<br>
+(√) Set up intake form<br>
+(√) Set application state<br>
+(√) output user details<br>
 (x) Create Profile Tab in Header Bar
 
 ## What is used
