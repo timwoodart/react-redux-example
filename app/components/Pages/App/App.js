@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
+// Main App Wrapper for Routes
 class App extends Component {
   render() {
     return (

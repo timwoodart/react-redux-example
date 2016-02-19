@@ -8,3 +8,27 @@
   }
 }
 
+
+.profile-display {
+  display: relative;
+
+  .profileInfoWrapper {
+    position: absolute;
+    p {
+      font-family: "ChunkFive";
+      font-size: 36px;
+      color: #eaeaea;
+      text-align: left;
+    }
+  }
+
+  .profilePicWrapper {
+    float: right;
+    width: 200px;
+    @include transform(rotate(-10deg));
+  }
+
+}
+
+
+

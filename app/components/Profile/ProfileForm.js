@@ -1,94 +1,72 @@
 import React, {PropTypes} from 'react';
 import {findDOMNode} from 'react-dom';
 import {Input, Button} from 'react-bootstrap';
-import {Grid, Row, Column} from 'react-cellblock';
 
 export default class ProfileForm extends React.Component {
 
   constructor(props) {
     super(props);
-    
-    // default state
-    this.state = {
-      'firstName': '',
-      'lastName': '',
-      'title': '',
-      'city': ''
-    }
-
+    // local binding
     this._submitProfile = this._submitProfile.bind(this);
-    this._updateInput = this._updateInput.bind(this);
   }
   
   _submitProfile(e) {
     e.preventDefault();
-    // TODO - dispatch values to update state tree
-  }
+    // get refs
+    var userProfile = {
+      userFirstName: findDOMNode(this.refs.userFirstName.getInputDOMNode()).value,
+      userLastName: findDOMNode(this.refs.userLastName.getInputDOMNode()).value,  
+      userTitle: findDOMNode(this.refs.userTitle.getInputDOMNode()).value,
+      userCity: findDOMNode(this.refs.userCity.getInputDOMNode()).value
+    }
 
-  _updateInput(inputName, e) {
-    // es6 computed property names for inputName
-    this.setState({[inputName]: e.target.value});
+    // dispatch update
+    this.props.handleSubmit(userProfile);
   }
 
   render() {
     return (
-
-      <Grid>
-        <h1>{this.props.formHeading}</h1>
-        <Row>
-          <Column width="1/2">
-              <form ref="profileForm" className="profile-form">
-                <fieldset>
-                  <Input
-                    type="text"
-                    label="First Name"
-                    placeholder="Enter your First Name"
-                    onChange={this._updateInput.bind(null, 'firstName')}
-                    value={this.state.firstName}
-                  />
-                  <Input 
-                    id="lastName"
-                    type="text"
-                    label="Last Name"
-                    placeholder="Enter your Last Name"
-                    onChange={this._updateInput.bind(null, 'lastName')}
-                    value={this.state.lastName}
-                  />
-                  <Input 
-                    type="text"
-                    label="Title"
-                    placeholder="Enter your Professional Title"
-                    onChange={this._updateInput.bind(null, 'title')}
-                    value={this.state.title}
-                  />
-                  <Input 
-                    type="text"
-                    label="City"
-                    placeholder="Enter the City you live in"
-                    onChange={this._updateInput.bind(null, 'city')}
-                    value={this.state.city}
-                  />
-                </fieldset>
-                <Button
-                  bsSize='large'
-                  bsStyle='primary'
-                  onClick={this._submitProfile}>
-                    Submit
-                </Button>
-              </form>
-
-          </Column>
-          <Column width="1/2">
-            Your Profile:
-          </Column>
-        </Row>
-      </Grid>
+      <form ref="profileForm" className="profile-form" onSubmit={this._submitProfile}>
+        <fieldset>
+          <Input
+            ref="userFirstName"
+            type="text"
+            label="First Name"
+            placeholder="Enter your First Name"
+          />
+          <Input 
+            ref="userLastName"
+            type="text"
+            label="Last Name"
+            placeholder="Enter your Last Name"
+          />
+          <Input
+            ref="userTitle" 
+            type="text"
+            label="Title"
+            placeholder="Enter your Professional Title"
+          />
+          <Input 
+            ref="userCity"
+            type="text"
+            label="City"
+            placeholder="Enter the City you live in"
+          />
+        </fieldset>
+        <Button
+          type="submit"
+          bsSize='large'
+          bsStyle='primary'>
+            Update Preview
+        </Button>
+      </form>
     );
   }
 }
 
 ProfileForm.propTypes = {
-  formHeading: PropTypes.string
+  formHeading: PropTypes.string,
+  handleSubmit: PropTypes.func.isRequired
 }
 
 ProfileForm.defaultProps = {
