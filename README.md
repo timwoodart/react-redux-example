@@ -1,5 +1,5 @@
 # React/Redux Example
-Redux / React Example to display the application architecture whereby the User Action of entering in there profile details will update the State tree and ultimately, other components in the View.
+Redux / React Example to display the application architecture whereby the User Action of entering in their profile details will update the State tree and ultimately, the display components in the View.
 
 ## Installation and Startup
 `npm install`<br>

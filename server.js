@@ -43,6 +43,6 @@ app.listen(PORT, 'localhost', (err) => {
   if (err) {
     console.log(err);
   }
-
   console.info(`Listening on port %d`, PORT);
+  console.info(`Go to http://localhost:%d to see the app`, PORT)
 });
